@@ -1,0 +1,101 @@
+:root {
+    --primary-color: #3498db;
+    --secondary-color: #2980b9;
+    --accent-color: #e74c3c;
+    --text-color: #333;
+    --bg-color: #f9f9f9;
+    --display-bg: #ecf0f1;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.calculator {
+    width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.display {
+    background-color: var(--display-bg);
+    padding: 20px;
+    text-align: right;
+    font-size: 2rem;
+    font-weight: bold;
+    height: 40px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background-color: #ddd;
+}
+
+.btn {
+    border: none;
+    padding: 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+.number {
+    background-color: white;
+}
+
+.number:hover {
+    background-color: #f0f0f0;
+}
+
+.operator {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.operator:hover {
+    background-color: var(--secondary-color);
+}
+
+.clear {
+    background-color: var(--accent-color);
+    color: white;
+}
+
+.clear:hover {
+    background-color: #c0392b;
+}
+
+.equals {
+    background-color: var(--secondary-color);
+    color: white;
+    grid-row: span 3;
+}
+
+.equals:hover {
+    background-color: #1a5276;
+}
+
+#zero {
+    grid-column: span 2;
+}
